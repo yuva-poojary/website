@@ -138,13 +138,10 @@ setInterval( async () => {
     }
 }, 8 * 60 * 60 * 1000);
 
-const options = {
-   key: fs.readFileSync(__dirname + '/ssl/private.pem', 'utf8'),
-  cert: fs.readFileSync(__dirname + '/ssl/public.pem', 'utf8')
 };
 
 const httpServer = http.createServer(app);
-const httpsServer = https.createServer(options, app);
+const httpsServer = https.createServer(app);
 
 httpServer.listen(80, () => {
 	console.log('HTTP Server running on port 80');
