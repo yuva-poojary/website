@@ -138,7 +138,7 @@ setInterval( async () => {
     }
 }, 8 * 60 * 60 * 1000);
 
-};
+
 
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(app);
