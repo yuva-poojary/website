@@ -1,2 +1,1 @@
-bot : npm start
-web : npm start
+worker: node app.js
